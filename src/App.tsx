@@ -22,7 +22,6 @@ import { thxSt } from "./thx/style.css.ts";
 export const App = () => {
   const [step, setStep] = useState(1);
   const [timerActive, setTimerActive] = useState(false);
-  const [secondTimerActive, setSecondTimerActive] = useState(false);
   const [amount, setAmount] = useState(10000);
   const [checked, setChecked] = useState({
     checkbox_1: false,
@@ -78,19 +77,6 @@ export const App = () => {
 
     return () => clearTimeout(timer);
   }, [timerActive]);
-
-  useEffect(() => {
-    let timer: number;
-
-    if (secondTimerActive) {
-      timer = setTimeout(() => {
-        setSecondTimerActive(false);
-        LS.setItem(LSKeys.ShowThx, true);
-      }, 20000);
-    }
-
-    return () => clearTimeout(timer);
-  }, [secondTimerActive]);
 
   if (LS.getItem(LSKeys.ShowThx, false)) {
     return <ThxLayout />;
