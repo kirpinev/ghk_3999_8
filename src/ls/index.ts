@@ -1,9 +1,17 @@
 export const enum LSKeys {
   ShowThx = "ab_show_thx_ghk_3999_8",
+  ShowThanks = "ab_show_thanks_ghk_3999_8",
+  ClickFirstStep = "ab_click_first_step_ghk_3999_8",
+  ClickSecondStep = "ab_click_second_step_ghk_3999_8",
+  ClickSpeed = "ab_click_speed_ghk_3999_8",
 }
 
 export interface LSData {
   [LSKeys.ShowThx]: boolean | null;
+  [LSKeys.ShowThanks]: boolean | null;
+  [LSKeys.ClickFirstStep]: boolean | null;
+  [LSKeys.ClickSecondStep]: boolean | null;
+  [LSKeys.ClickSpeed]: boolean | null;
 }
 
 const getItem = <K extends LSKeys>(
