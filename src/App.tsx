@@ -591,7 +591,7 @@ export const App = () => {
             <ButtonMobile
               onClick={() => {
                 if (!LS.getItem(LSKeys.ClickSpeed, false)) {
-                  window.gtag("event", "3999_boost_click", {
+                  window.gtag("event", "3999_boost_click_var8", {
                     variant_name: "ghk_3999_8",
                   });
 
@@ -751,7 +751,7 @@ export const App = () => {
           <ButtonMobile
             onClick={() => {
               if (!LS.getItem(LSKeys.ClickFirstStep, false)) {
-                window.gtag("event", "3999_next_click_step1", {
+                window.gtag("event", "3999_next_click_step1_var8", {
                   variant_name: "ghk_3999_8",
                 });
 
@@ -793,7 +793,7 @@ export const App = () => {
                 email: email,
               }).then(() => {
                 if (!LS.getItem(LSKeys.ClickSecondStep, false)) {
-                  window.gtag("event", "3999_next_click_step2", {
+                  window.gtag("event", "3999_next_click_step2_var8", {
                     variant_name: "ghk_3999_8",
                   });
 
